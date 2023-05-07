@@ -1,12 +1,20 @@
 import React, {useEffect, useState} from 'react'
 import '../styles/App.css';
-
+const [text,setText]=useState("redColor")
 const App = () => {
 //code here 
+const change=()=>{
+if(text==="redColor"){
+  setText("blueColor");
+}
+else{
+  setText("redColor");
+}
+}
   return (
     <div id="main">
-      <p className={} >Newton School</p>
-      <button id='button' onClick={}>Change Style</button>
+      <p className={text}>Newton School</p>
+      <button id='button' onClick={change}>Change Style</button>
     </div>
   )
 }
